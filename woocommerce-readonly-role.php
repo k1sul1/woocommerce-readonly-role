@@ -26,7 +26,7 @@ class WooCommerce_Readonly_Role {
 
     $this->capabilities = apply_filters('wcror_role_capabilities', array(
       'read' => true, // must have to even access /wp-admin
-      'edit_posts' => true,
+      'edit_posts' => true, // without this the user is redirected to WooCommerce account page
       'publish_posts' => false,
       'read_shop_order' => true,
       'edit_shop_orders' => true, // show orders in menu
@@ -148,6 +148,7 @@ class WooCommerce_Readonly_Role {
   }
 
   public function generalCleanup() {
+    // Do some general clean up, hide extra menus and "add new" buttons.
     add_action('admin_head', function() {
     ?>
     <style>
