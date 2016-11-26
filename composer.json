@@ -1,0 +1,14 @@
+{
+    "name": "k1sul1/woocommerce-readonly-role",
+    "description": "Adds a new user role that allows to view orders, but not edit them",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Christian Nikkanen",
+            "email": "christian.nikkanen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
