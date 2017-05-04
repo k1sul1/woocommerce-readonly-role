@@ -79,7 +79,7 @@ class WooCommerce_Readonly_Role {
 
     $screen = get_current_screen();
 
-    if (is_object($screen) && $screen->base === 'post' && $screen->id = 'shop_order') {
+    if (is_object($screen) && $screen->base === 'post' && $screen->id === 'shop_order') {
       $this->orderScreenCleanup();
     }
   }
