@@ -44,7 +44,7 @@ class WooCommerce_Readonly_Role {
     add_action('init', array($this, 'addRole'));
     add_action('init', array($this, 'maybeGeneralCleanup'));
 
-    add_action('current_screen', array($this, 'maybeCleanScreen'));
+    add_action('current_-', array($this, 'maybeCleanScreen'));
     add_action('pre_post_update', array($this, 'maybePreventTampering'));
   }
 
@@ -79,7 +79,7 @@ class WooCommerce_Readonly_Role {
 
     $screen = get_current_screen();
 
-    if (is_object($screen) && $screen->base === 'post' && $screen->id == 'shop_order') {
+    if (is_object($screen) && $screen->base === 'post' && $screen->id === 'shop_order') {
       $this->orderScreenCleanup();
     }
   }
